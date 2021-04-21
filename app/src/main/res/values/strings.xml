@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">UserGithub</string>
+    <string name="nama_user">Nama User</string>
+    <string name="username">Username</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="nulled">NULL</string>
+    <string name="location">Location</string>
+    <string name="work">Work</string>
+    <string name="repositories">Repositories</string>
+
+    <string name="work_at">Work at</string>
+    <string name="separator">Separator</string>
+    <string name="favourite">Favourite</string>
+    <string name="setting">Setting</string>
+    <string name="reminder_setting">Reminder Setting</string>
+    <string name="daily_reminder">Github Daily Reminder</string>
+    <string name="daily_message">Let`s find favourite user on Github</string>
+</resources>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".view.DetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatars"
+            android:layout_width="150dp"
+            android:layout_height="130dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"/>
+
+        <LinearLayout
+            android:id="@+id/namalayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toEndOf="@id/avatars"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:text="@string/nama_user"
+                android:textColor="@color/colorAccent3"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif"/>
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="@string/username"
+                android:textColor="@color/colorAccent3"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/profile"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="170dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/work_at"
+                style="@style/MyText"/>
+
+            <ImageView
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="5dp"
+                android:contentDescription="@string/separator"
+                app:srcCompat="@android:drawable/presence_invisible" />
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/location"
+                style="@style/MyText"/>
+
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_below="@id/profile"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/followerss"
+                    android:gravity="center_horizontal"
+                    android:text="@string/nulled"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/followings"
+                    android:gravity="center_horizontal"
+                    android:text="@string/nulled"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/repo"
+                    android:gravity="center_horizontal"
+                    android:text="@string/repositories"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/followers"
+                    android:gravity="center_horizontal"
+                    android:text="@string/followers"
+                    style="@style/MyText"/>
+
+                <TextView
+                    android:id="@+id/following"
+                    android:gravity="center_horizontal"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/following"
+                    style="@style/MyText"/>
+
+                <TextView
+                    android:id="@+id/repository"
+                    android:gravity="center_horizontal"
+                    android:text="@string/repositories"
+                    style="@style/MyText"/>
+            </TableRow>
+
+        </TableLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="270dp"
+            android:background="@color/colorAccent"
+            android:minHeight="?actionBarSize"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorHeight="2dp"
+            app:tabMode="fixed"
+            app:tabTextColor="@android:color/white" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="330dp" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_fav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="130dp"
+            android:layout_toEndOf="@id/avatars"
+            android:background="@color/white"
+            android:src="@drawable/iconfinder_love_5962606" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
